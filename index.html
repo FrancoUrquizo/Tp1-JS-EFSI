@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Formatear nombre</title>
+    
+</head>
+
+<body>
+    <div>
+        <h2>ej1 cambiar formato</h2>
+        <p>Ponga un nombre</p>
+
+        <form>
+            <input type="text" id="nombreEj1">
+            <button type="button" onclick="formatearNombre(document.getElementById('nombreEj1').value)">Enviar</button>
+        </form>
+
+        <p>Resultado:</p>
+        <p id="resultadoEj1"></p>
+    </div>
+
+     <div>
+        <h2>ej2 contar letras </h2>
+        <p>Ponga una palabra</p>
+
+        <form>
+            <input type="text" id="PalabraEj2">
+            <button type="button" onclick="ContarLetras(document.getElementById('PalabraEj2').value)">Enviar</button>
+        </form>
+
+        <p>Resultado:</p>
+        <p id="resultadoEj2"></p>
+    </div>
+
+    <div>
+        <h2>ej3 Número mayor </h2>
+        <p>introduzca tus numeros</p>
+
+        <form>
+            <input type="number" id="numero1">
+            <input type="number" id="numero2">
+            <input type="number" id="numero3">
+
+            <button type="button" onclick="NumeroMayor(document.getElementById('numero2').value, document.getElementById('numero1').value, document.getElementById('numero3').value)">Enviar</button>
+        </form>
+
+        <p>Resultado:</p>
+        <p id="resultadoEj3"></p>
+    </div>
+
+    <script src="site.js"></script>
+</body>
+</html>
