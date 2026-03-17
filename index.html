@@ -49,6 +49,120 @@
         <p id="resultadoEj3"></p>
     </div>
 
+    <div>
+        <h2>ej5 Suma de array</h2>
+        <p>Introduce números separados por comas (ej: 3, 5, 10)</p>
+
+        <form >
+            <input type="text" id="numeros">
+           
+          <button type="button" onclick="sumarArray(document.getElementById('numeros').value)">Enviar</button>
+       
+        </form>
+        <p>Resultado:</p>
+        <p id="resultadoEj5"> </p>
+    </div>
+
+    <div>
+    <h2>ej7 Filtrar pares</h2>
+    <p>Introduce números separados por comas (ej: 3, 5, 10)</p>
+
+    <form>
+        <input type="text" id="numeros">
+        <button type="button" onclick="obtenerPares(document.getElementById('numeros').value)">Enviar</button>
+    </form>
+
+    <p>Resultado:</p>
+    <p id="resultadoEj7"></p>
+</div>
+
+<div>
+    <h2>ej10 Precio Total</h2>
+    <p>Haz clic para calcular el total de la lista de productos</p>
+    "Mouse", precio: 10
+     "Teclado", precio: 25
+     "Monitor", precio: 200
+    
+    <button type="button" onclick="calcularPrecioTotal(productos)">Calcular Total</button>
+
+    <p>Resultado:</p>
+    <p id="resultadoEj10"></p>
+</div>
+
+<div>
+    <h2>ej11 Extraer Nombres (map)</h2>
+    <p>Haz clic para obtener la lista de nombres de los usuarios</p>
+    nombre:"Ana", edad:17,
+
+nombre:"Juan", edad:25,
+
+nombre:"Pedro", edad:30
+    <button type="button" onclick="extraerNombres()">Obtener Nombres</button>
+
+    <p>Resultado:</p>
+    <p id="resultadoEj11"></p>
+</div>
+
+<div>
+    <h2>ej12 Filtrar Mayores de Edad</h2>
+    <p>Haz clic para obtener solo los usuarios con 18 años o más</p>
+    
+    <button type="button" onclick="filtrarMayores()">Filtrar Usuarios</button>
+
+    <p>Resultado:</p>
+    <p id="resultadoEj12"></p>
+</div>
+
+<div>
+    <h2>ej13 Suma con Reduce</h2>
+    <p>Haz clic para sumar todas las edades de los usuarios</p>
+    
+    <button type="button" onclick="sumaEdades()">Calcular Suma</button>
+
+    <p>Resultado:</p>
+    <p id="resultadoEj13"></p>
+</div>
+
+<div>
+    <h2>ej16 Buscar producto</h2>
+    
+    
+    <p>Escribe el nombre del producto (Mouse, Teclado, Monitor):</p>
+
+    <form>
+        <input type="text" id="nombreBusqueda" placeholder="Ej: Monitor">
+        <button type="button" onclick="buscarProducto(misProductos, document.getElementById('nombreBusqueda').value)">
+            Buscar
+        </button>
+    </form>
+
+    <p id="resultadoEj16"></p>
+</div>
+
+<div>
+    <h2>ej17 Productos Caros (> $50)</h2>
+    <p>Haz clic para ver qué productos de la tienda son considerados caros.</p>
+    
+    <button type="button" onclick="obtenerProductosCaros()">Ver productos caros</button>
+
+    <p id="resultadoEj17"></p>
+
+</div>
+
+<div>
+    <h2>ej18 Calcular Promedio</h2>
+    <p>Introduce los números separados por comas:</p>
+
+    <form>
+        <input type="text" id="inputPromedio" placeholder="10, 8, 6, 9">
+        <button type="button" onclick="calcularPromedio(document.getElementById('inputPromedio').value)">
+            Calcular Promedio
+        </button>
+    </form>
+
+    <p id="resultadoEj18" ></p>
+</div>
+
     <script src="site.js"></script>
 </body>
 </html>
