@@ -1,0 +1,130 @@
+/* --- VARIABLES DE COLOR SAIYAJIN --- */
+:root {
+    --goku-orange: #ff6600; /* El color de su Gi */
+    --goku-blue: #0047ab;   /* El color de su camiseta interior/muñequeras */
+    --goku-yellow: #ffcc00; /* El color de su cabello Super Saiyajin */
+    --glass-bg: rgba(255, 255, 255, 0.08); /* Transparencia base */
+    --glass-border: rgba(255, 255, 255, 0.15);
+}
+
+/* --- FONDO DINÁMICO --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: radial-gradient(circle at center, #1a1a1a, #000000);
+    color: #ffffff;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* --- TÍTULOS DE SECCIÓN --- */
+h1 {
+    color: var(--goku-orange);
+    text-shadow: 0 0 15px rgba(255, 102, 0, 0.5);
+    margin: 50px 0 30px;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 3px solid var(--goku-blue);
+    padding-bottom: 10px;
+}
+
+/* --- TARJETAS CON TRANSPARENCIA "KAMEHAMEHA" --- */
+div {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px); /* El efecto de desenfoque */
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 650px;
+    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 71, 171, 0.4); /* Resplandor azul al pasar el mouse */
+    border-color: var(--goku-blue);
+}
+
+h2 {
+    color: var(--goku-orange);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+h2::before {
+    content: "悟"; /* Símbolo "Go" de Goku */
+    font-family: 'Courier New', Courier, monospace;
+    background: var(--goku-orange);
+    color: black;
+    padding: 4px 8px;
+    border-radius: 50%;
+    margin-right: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* --- INPUTS ESTILO SAIYAJIN --- */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid #444;
+    border-radius: 8px;
+    color: var(--goku-yellow);
+    font-family: monospace;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--goku-yellow);
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.3);
+}
+
+/* --- BOTÓN SAIYAJIN --- */
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, var(--goku-orange) 0%, #ff9900 100%);
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ff9900 0%, var(--goku-yellow) 100%);
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(255, 204, 0, 0.3);
+}
+
+/* --- RESULTADOS ESTILO RESPLANDOR --- */
+[id^="resultadoEj"] {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    border-left: 3px solid var(--goku-blue);
+    color: #00ff88; /* Verde terminal para el resultado */
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+    word-break: break-all;
+}
+
+[id^="resultadoEj"]::before {
+    content: "> ";
+    color: var(--goku-blue);
+}

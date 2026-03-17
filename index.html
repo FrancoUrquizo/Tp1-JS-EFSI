@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Formatear nombre</title>
+    <link rel="stylesheet" href="estilo.css">
     
 </head>
 
@@ -162,6 +163,135 @@ nombre:"Pedro", edad:30
 
     <p id="resultadoEj18" ></p>
 </div>
+
+
+
+
+    <div>
+        <h2>e6 numero mas alto de un array</h2>
+        <p>Ponga unos numeros con coma entre ellos</p>
+
+
+        <form>
+            <input type="text" id="numerosEj6">
+            <button type="button" onclick="mayorNumero(document.getElementById('numerosEj6').value)">Enviar</button>
+        </form>
+
+
+        <p>Resultado:</p>
+        <p id="resultadoEj6"></p>
+    </div>
+
+
+<h1>Parte 3 — Objetos</h1>
+
+
+<div>
+        <h2>Ej8 numero mas alto de un array</h2>
+        <p>Toque para ver la descripcion </p>
+
+
+       
+            <button type="button" onclick="descripcionUsuario()">Ver descripcion</button>
+ 
+
+
+        <p>Resultado:</p>
+        <p id="resultadoEj8"></p>
+    </div>
+    <div>
+        <h2>Ej9 Activar usuario</h2>
+        <p>Toque para Acyovar el usuario </p>
+
+
+       
+            <button type="button" onclick="ActivarUsuario()">Activar</button>
+ 
+
+
+        <p>Resultado:</p>
+        <p id="resultadoEj9"></p>
+    </div>
+
+
+
+
+<h1> Parte 5 — Destructuring y Spread</h1>
+
+
+
+
+<div>
+        <h2>Ej14 Usar destructing</h2>
+        <p>Toque para hacer la funcion</p>
+
+
+       
+            <button type="button" onclick="UsarDestructing()">Activar</button>
+ 
+
+
+        <p>Resultado:</p>
+        <p id="resultadoEj14"></p>
+    </div>
+
+
+
+
+
+
+<div>
+        <h2>Ej15 Usar spread</h2>
+        <p>Toque para hacer la funcion</p>
+
+
+       
+            <button type="button" onclick="Usarspread()">Activar</button>
+ 
+
+
+        <p>Resultado:</p>
+        <p id="resultadoEj15"></p>
+    </div>
+
+
+<h1>Desafío final — Simulación de lógica de API</h1>
+
+
+<div>
+        <h2>funciones de las apis</h2>
+        <p>Toque para hacer las funciones</p>
+
+
+        <form>
+            <h3>ponga un id</h3>
+            <input type="number" id="numerosEjAPi">
+            <button type="button" onclick="obtenerUsuarioPorId(document.getElementById('numerosEjAPi').value)">Enviar</button>
+        </form>
+
+
+            <p id="resultadoEjApi1"></p>
+           
+  <button type="button" onclick="obtenerMayores()()">Activar</button>
+
+
+<form>
+            <h3>ponga un id</h3>
+            <p>nombre: </p>
+            <input type="text" id="nombreEjAPi">
+
+
+              <p>edad: </p>
+            <input type="number" id="edadEjAPi">
+            <button type="button" onclick="crearUsuario(document.getElementById('nombreEjAPi').value, document.getElementById('edadEjAPi').value)">Enviar</button>
+        </form>
+<p id="resultadoEjApi2"></p>
+
+
+        <p>Resultado:</p>
+        <p id="resultadoEjApi"></p>
+    </div>
+
 
     <script src="site.js"></script>
 </body>

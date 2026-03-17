@@ -228,3 +228,227 @@ function calcularPromedio(textoInput) {
     document.getElementById("resultadoEj18").innerHTML = "El promedio es: " + promedio;
 }
 
+
+
+
+function validarPassword(password) {
+  const resultado = document.getElementById("resultadoEj4");
+
+
+
+
+  if (password.length >= 8) {
+   
+
+
+    if (/\d/.test(password)) {
+      resultado.innerHTML = "Contraseña validada y correcta";
+      return true;
+    } else {
+      resultado.innerHTML = "La contraseña debe tener al menos un número";
+      return false;
+    }
+
+
+  } else {
+    resultado.innerHTML = "La contraseña es demasiado corta";
+    return false;
+  }
+}
+
+
+
+
+function mayorNumero(numeros)
+{
+    const arrayNumeros = numeros.split(",").map(n => Number(n.trim())); //esto hace que lo que viene deje de ser string y pase a ser input
+    let numeroMayor = 0
+
+
+    for(let i = 0; i <= arrayNumeros.length; i++)
+    {
+if(arrayNumeros[i] >= numeroMayor)
+{
+    numeroMayor = arrayNumeros[i]
+}
+
+
+    }
+
+
+    const resultado = document.getElementById("resultadoEj6");
+    resultado.innerHTML = "El número mayor es: " + numeroMayor;
+}
+
+
+function descripcionUsuario()
+{
+    const usuario = {
+
+
+ nombre: "Ana",
+ edad: 20,
+ activo: false
+}
+
+
+  const resultado = document.getElementById("resultadoEj8");
+    resultado.innerHTML = `${usuario.nombre} tiene ${usuario.edad} años ` ;
+
+
+return usuario
+
+
+
+
+}
+
+
+
+
+function ActivarUsuario()
+{
+
+
+    const usuario = descripcionUsuario()
+    usuario.activo = true
+if(usuario.activo)
+{
+    const resultado = document.getElementById("resultadoEj9");
+    resultado.innerHTML = "usuario activado" ;
+}
+}
+
+
+function UsarDestructing()
+{
+    const producto = {
+nombre:"Notebook",
+precio:1000
+
+
+}
+
+
+const {nombre,precio } = producto
+
+
+ const resultado = document.getElementById("resultadoEj14");
+    resultado.innerHTML = `variebles separadas: ${nombre}, ${precio}` ;
+}
+
+
+
+
+
+
+function Usarspread()
+{
+
+
+    const producto = {
+nombre:"Notebook",
+precio:1000
+
+
+}
+let cantidad = 6
+const NuevoProduct = {...producto, cantidad }
+ const resultado = document.getElementById("resultadoEj15");
+    resultado.innerHTML = `variebles separadas: ${NuevoProduct.nombre}, ${NuevoProduct.precio} y ${NuevoProduct.cantidad}` ;
+}
+
+
+
+
+
+
+
+
+function devolverLista()
+{
+    const usuarios = [
+
+
+{id:1, nombre:"Ana", edad:20},
+
+
+{id:2, nombre:"Juan", edad:15},
+
+
+{id:3, nombre:"Pedro", edad:30}
+]
+
+
+return usuarios
+}
+
+
+
+
+
+
+ function obtenerUsuarioPorId(id)
+ {
+    const usuarios = devolverLista()
+
+
+    const usuario = usuarios.filter( u => u.id === id)
+   
+    const resultado = document.getElementById("resultadoEjApi1");
+    resultado.innerHTML = ` El usuario con el id ${id} es: ${usuario.nombre}`;
+}
+
+
+ 
+function obtenerMayores()
+{
+    const usuarios = devolverLista()
+
+
+    const usuario = usuarios.filter( u => u.edad >= 18)
+
+
+    const resultado = document.getElementById("resultadoEjApi1");
+
+
+   usuario.forEach(u => {
+        resultado.innerHTML += `<li>${u.nombre}</li>`;
+    });
+
+
+   
+}
+
+
+
+
+function crearUsuario (nombre, edad)
+{
+
+
+const usuarioNuevo = {
+nombre : nombre,
+edad : edad
+}
+
+
+const listaUsuarios = devolverLista()
+
+
+listaUsuarios.push(usuarioNuevo)
+
+
+
+
+const resultado = document.getElementById("resultadoEjApi2");
+
+
+   listaUsuarios.forEach(u => {
+        resultado.innerHTML += `<li>${u.nombre}</li>`;
+    });
+
+
+}
+
+
